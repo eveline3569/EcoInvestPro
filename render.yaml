@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ecocash-wealth
+    env: php
+    buildCommand: |
+      mkdir -p data
+      chmod 777 data
+    startCommand: php -S 0.0.0.0:10000
+    plan: free
+    envVars:
+      - key: PHP_VERSION
+        value: 8.2

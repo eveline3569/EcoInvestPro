@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ index.php?action=home [L]
+    RewriteRule ^([a-z]+)$ index.php?action=$1 [L]
+</IfModule>
