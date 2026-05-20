@@ -1,12 +1,12 @@
 services:
   - type: web
     name: ecocash-wealth
-    env: php
-    buildCommand: |
-      mkdir -p data
-      chmod 777 data
-    startCommand: php -S 0.0.0.0:10000
+    runtime: image
+    repo: https://github.com/eveline3569/EcoInvestPro
     plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
     envVars:
       - key: PHP_VERSION
-        value: 8.2
+        value: "8.2"
