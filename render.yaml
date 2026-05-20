@@ -1,12 +1,9 @@
 services:
   - type: web
     name: ecocash-wealth
-    runtime: image
+    env: docker
     repo: https://github.com/eveline3569/EcoInvestPro
     plan: free
     branch: main
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
-    envVars:
-      - key: PHP_VERSION
-        value: "8.2"
